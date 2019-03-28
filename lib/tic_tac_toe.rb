@@ -49,7 +49,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    display_board(board)
+    display_board(board, index)
   else
     turn(board)
   end
@@ -78,7 +78,6 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-#Define your WIN_COMBINATIONS constant
 
 #defines if there is a winning combination, draw, or if the board is empty
 def won?(board)
