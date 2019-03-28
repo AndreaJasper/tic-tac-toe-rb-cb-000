@@ -138,7 +138,7 @@ def play(board)
     if turn = !over?(board)
       return false
     elseif !won?(board)
-      puts "Congratulations"
+      return false
     else
       return true
   end
