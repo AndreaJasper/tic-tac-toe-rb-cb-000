@@ -134,12 +134,13 @@ end
 
 #Play method that initiates the loop until game won, full or draw
 def play(board)
-  input = turn.gets
-    if turn = !over?(board)
-      return false
-    elseif !won?(board)
-      return false
-    else
-      return true
+  until over? == true
+    true
+  end
+    if won?
+      puts "Congratulations #{winner}"
+    elsif draw?
+      puts "Cat's Game!"
+    end
   end
 end
